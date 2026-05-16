@@ -1,0 +1,28 @@
+# Data (not redistributable — download from source)
+data/
+
+# Large model checkpoints (download separately per README)
+models/sam_vit_h.pth
+models/sam3/
+
+# Submission artifacts
+*_submission_folder/
+*_submission_folder.tar.gz
+
+# Evaluation tooling (third-party, not ours)
+MVTecAD2_public_code_utils/
+
+# Output / results
+output/
+*.xlsx
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+
+# IDE / tooling
+.claude/
+.vscode/
+.idea/
+*.egg-info/

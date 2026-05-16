@@ -1,0 +1,65 @@
+Creative Commons Attribution-NonCommercial 4.0 International
+
+Copyright (c) 2025 Md Abdullah Al Jubaer Gem, Tanjil Hasan Khan,
+Ibrahima Mamoudou, Shufan Shahi, Afra Anika
+(Islamic University of Technology, Gazipur, Bangladesh)
+
+This work is licensed under the Creative Commons
+Attribution-NonCommercial 4.0 International License.
+
+You are free to:
+  Share — copy and redistribute the material in any medium or format
+  Adapt — remix, transform, and build upon the material
+
+Under the following terms:
+  Attribution — You must give appropriate credit, provide a link to
+    the license, and indicate if changes were made.
+  NonCommercial — You may not use the material for commercial purposes.
+
+No additional restrictions — You may not apply legal terms or
+technological measures that legally restrict others from doing
+anything the license permits.
+
+Full license text: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+
+-------------------------------------------------------------------------------
+THIRD-PARTY CODE NOTICES
+-------------------------------------------------------------------------------
+
+This repository builds on the following third-party codebases:
+
+1. MuSc (Zero-Shot Anomaly Detection via Mutual Scoring)
+   Source : https://github.com/xrli-U/MuSc
+   Paper  : Li et al., ICLR 2024
+   License: MIT
+   Modules used as-is: models/modules/_LNAMD.py, models/modules/_MSM.py,
+            models/modules/_RsCIN.py, models/RsCIN_features/,
+            examples/musc_main.py, datasets/, configs/, utils/
+
+2. open_clip
+   Source : https://github.com/mlfoundations/open_clip
+   License: MIT
+   Location: models/backbone/open_clip/
+
+3. DINOv2
+   Source : https://github.com/facebookresearch/dinov2
+   License: Apache-2.0
+   Location: models/backbone/dinov2/
+
+4. Segment Anything Model (SAM)
+   Source : https://github.com/facebookresearch/segment-anything
+   License: Apache-2.0
+   Usage  : models/sam_refiner.py (SAM1 backend, checkpoint not included)
+
+5. SAM 3 (Sam3TrackerModel)
+   Source : https://huggingface.co/facebook/sam3
+   License: Apache-2.0
+   Usage  : models/sam_refiner.py (SAM3 backend, weights downloaded at runtime)
+
+6. PatchCore
+   Source : https://github.com/amazon-science/patchcore-inspection
+   License: Apache-2.0
+   Usage  : Conceptual influence on feature extraction pipeline
+
+EthMuSAM's original contributions (DINOv3 backbone integration and the
+cascaded 3-pass SAM refinement stage) are released under CC BY-NC 4.0 above.
