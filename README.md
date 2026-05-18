@@ -38,8 +38,8 @@ Three stages, all frozen pretrained models:
 **Stage 3 — Cascaded SAM Refinement** *(cascaded prompt strategy adapted from [ClipSAM](https://arxiv.org/abs/2510.11028))*
 Given heatmap H:
 1. Anomaly region R via adaptive Otsu thresholding (fallback: top-10 percentile)
-2. Positive points: top-k spatially-spaced pixels from H (`k=5`, min spacing 30px)
-3. Negative ring: lowest-H pixels from 25×25 ellipse dilation of R minus R
+2. Positive points: top-k spatially-spaced pixels from H 
+3. Negative ring: lowest-H pixels from ellipse dilation of R minus R
 4. **Pass 1**: SAM(points) → M1, logit1
 5. **Pass 2**: SAM(points + logit1) → M2, logit2
 6. **Pass 3**: SAM(points + bbox(M2) + logit2) → **M3** (final mask)
@@ -109,7 +109,7 @@ SAM3 uses `Sam3TrackerModel` + `Sam3TrackerProcessor` from `transformers`. Requi
 
 ## Datasets
 
-Place all datasets under `./data/`. Some datasets require a preprocessing script from `datasets/` to generate a metadata JSON before the loader can read them.
+Place all datasets under `./data/`. Some datasets require a preprocessing script from `datasets/` to generate a metadata JSON before the loader can read them. So run the dataset_name.py files for those datasets. Then proceed with the next steps. For this work our main dataset is MVTec AD 2 . And MVTec AD was used for finding threshold only.
 
 **MVTec AD 2** (primary — this paper):
 ```
